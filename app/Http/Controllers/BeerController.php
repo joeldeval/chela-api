@@ -11,7 +11,7 @@ class BeerController extends Controller{
 
     public function index(){
   
-        $Beers  = Beer::all();
+        $Beers  = Beer::with('brand')->with('country')->with('type')->get();
   
         return response()->json($Beers);
   
