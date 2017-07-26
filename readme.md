@@ -1,21 +1,38 @@
-# Lumen PHP Framework
+# 1. Clona y utiliza ese ejemplo como API rest
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+        git clone https://github.com/joeldeval/chela-api.git
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# 2. Instala las dependencias
 
-## Official Documentation
+        // entra a la carpeta del proyecto
+        cd chela-api
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+        // ahora instala las dependencias
+        composer install
 
-## Security Vulnerabilities
+# 3. Conectar a base de datos
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+###  Crea una base de datos y cambia el nombre del archivo .env.exampe por solo .env al abrirlo deberas cambiar la informacion para que apunte a tu base de datos
 
-## License
+        APP_ENV=local
+        APP_DEBUG=true
+        APP_KEY=
+        APP_TIMEZONE=UTC
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=NOMBER_BASE_DE_DATOS
+        DB_USERNAME=USUARIO_BASE_DE_DATOS
+        DB_PASSWORD=PASSWORD_BASE_DE_DATOS
+
+        CACHE_DRIVER=file
+        QUEUE_DRIVER=sync
+
+# 4. Migra la base de datos del proyecto
+
+        php artisan migrate
+
+# 5. Inserta registros a la base de datos
+
+        php artisan db:seed
