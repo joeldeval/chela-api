@@ -17,7 +17,8 @@ class BeersTableSeeder extends Seeder
             'id_brand' => 2,
             'id_country' => 4,
             'name' => 'HEINEKEN',
-            'color' => 'clara'
+            'color' => 'clara',
+            'img' => 'http://localhost:8001/img/heineken/botella.png'
         ]);
 
         DB::table('beers')->insert([
@@ -26,7 +27,8 @@ class BeersTableSeeder extends Seeder
             'id_brand' => 1,
             'id_country' => 1,
             'name' => 'ERDINGER',
-            'color' => 'clara'
+            'color' => 'clara',
+            'img' => 'http://localhost:8001/img/erdinger/botella.png'
         ]);
     }
 }

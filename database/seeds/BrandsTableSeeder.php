@@ -12,11 +12,13 @@ class BrandsTableSeeder extends Seeder
     public function run()
     {
         DB::table('brands')->insert([
-            'name' => 'ERDINGER'
+            'name' => 'ERDINGER',
+            'img' => 'http://localhost:8001/img/erdinger/logo.png'
         ]);
 
         DB::table('brands')->insert([
-            'name' => 'HEINEKEN'
+            'name' => 'HEINEKEN',
+            'img' => 'http://localhost:8001/img/heineken/logo.png'
         ]);
         DB::table('brands')->insert([
             'name' => 'CORONA'
