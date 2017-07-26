@@ -10,7 +10,11 @@
         // ahora instala las dependencias
         composer install
 
-# 3. Conectar a base de datos
+# 3. Ejecuta la app
+
+        php -S localhost:8001 -t public
+
+# 4. Conectar a base de datos
 
 ###  Crea una base de datos y cambia el nombre del archivo .env.exampe por solo .env al abrirlo deberas cambiar la informacion para que apunte a tu base de datos
 
@@ -29,10 +33,10 @@
         CACHE_DRIVER=file
         QUEUE_DRIVER=sync
 
-# 4. Migra la base de datos del proyecto
+# 5. Migra la base de datos del proyecto
 
         php artisan migrate
 
-# 5. Inserta registros a la base de datos
+# 6. Inserta registros a la base de datos
 
         php artisan db:seed
