@@ -14,3 +14,17 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+
+$app->group(['prefix' => 'api/v1'], function($app)
+{
+    $app->get('beer','BeerController@index');
+  
+    $app->get('beer/{id}','BeerController@getBeer');
+      
+    $app->post('beer','BeerController@createBeer');
+      
+    $app->put('beer/{id}','BeerController@updateBeer');
+      
+    $app->delete('beer/{id}','BeerController@deleteBeer');
+});
